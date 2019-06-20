@@ -1,0 +1,6 @@
+.vscode/
+
+*.py[co]
+
+build/
+dist/

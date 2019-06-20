@@ -1,0 +1,19 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+cx-freeze = {file = "https://download.lfd.uci.edu/pythonlibs/t4jqbe6o/cx_Freeze-5.1.1-cp37-cp37m-win32.whl"}
+black = "==19.3b0"
+
+[packages]
+sounddevice = "==0.3.13"
+numpy = "==1.16.4"
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+build = "rd /s /q build dist & python setup.py bdist_msi"
+
