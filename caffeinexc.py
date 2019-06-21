@@ -7,7 +7,7 @@ import numpy  # Make sure NumPy is loaded before it is used in the callback
 
 
 def callback(outdata, frames, time, status):
-    pass
+    outdata.fill(0)
 
 
 if __name__ == "__main__":
@@ -25,13 +25,13 @@ if __name__ == "__main__":
             break
     else:
         print("Cannot found Xbox device.")
-        print("Press Return to quit.")
+        print("Press Enter to quit.")
         input()
         sys.exit(-1)
 
     try:
         with sd.OutputStream(device=output_index, callback=callback):
-            print("Press Return to quit.")
+            print("Press Enter to quit.")
             input()
             sys.exit(0)
     except KeyboardInterrupt:
